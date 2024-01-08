@@ -35,6 +35,8 @@ const initScene = () => {
   		pointLight.position.set(0, 1, 0);
 
 	scene.add(pointLight);
+    // scene.fog = new THREE.Fog(0xcccccc, 10, 50);
+    scene.fog = new THREE.FogExp2(0xcccccc, 3);
   clock.start();
   var loader = new ColladaLoader();
   loader.load('/models/montre.dae', onLoaded, onProgress, onError );
