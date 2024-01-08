@@ -31,8 +31,10 @@ const initScene = () => {
   renderer.setSize(window.innerWidth, window.innerHeight)
   renderer.setClearColor(0x222222,1);
   controls = new OrbitControls(camera,renderer.domElement);
-  var ambientLight = new THREE.AmbientLight(0x101010);
-    scene.add(ambientLight);
+  var pointLight = new THREE.PointLight(0xffffff,1);
+  		pointLight.position.set(0, 1, 0);
+
+	scene.add(pointLight);
   clock.start();
   var loader = new ColladaLoader();
   loader.load('/models/montre.dae', onLoaded, onProgress, onError );
@@ -49,21 +51,22 @@ const animate = () => {
 }
 
  function onLoaded(collada) {
-      let objects = collada.scene;
+	  let objects = collada.scene;
         scene.add(objects);
     let dt = clock.getElapsedTime();
     console.log("Loading completed after "+dt+" s.");
   }
-  var onProgress = function(data) {
-      if ( data.lengthComputable ) {
-              var percentComplete = data.loaded / data.total * 100;
-              console.log( Math.round( percentComplete, 2 ) + '% downloaded' );
-        }
-    };
 
-    var onError = function(data) {
-        console.error(data);
-    };
+var onProgress = function(data) {
+  	if ( data.lengthComputable ) {
+  			var percentComplete = data.loaded / data.total * 100;
+  			console.log( Math.round( percentComplete, 2 ) + '% downloaded' );
+		}
+	};
+
+	var onError = function(data) {
+		console.error(data);
+	};
 
 const onClick = () => {
     console.log('document cliqué')
@@ -81,7 +84,7 @@ onBeforeUnmount(() => {
 })
 
 </script>
-
+    
 <template>
     <div>
         <canvas ref="canvas"/>
