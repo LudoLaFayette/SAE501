@@ -1,4 +1,5 @@
 @import 'functions';
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700&display=swap');
 
 $primary-color: #F48E28;
 $secondary-color: #F5DDC4 ;
@@ -6,15 +7,16 @@ $secondary-color: #F5DDC4 ;
 $white: #ffffff;
 $grey : #B6B6B6 ;
 $black: #000000;
+$light-grey: #FAFAFF;
 
-$very_tiny_font_size : 13px ;
-$tiny_font_size: 18px;
-$normal_font_size: 26px;
-$big_font_size: 36px;
-$bigger_font_size: 48px;
-$title_size: 98px;
+$very_tiny_font_size : rem(13) ;
+$tiny_font_size: rem(18);
+$normal_font_size: rem(26);
+$big_font_size: rem(36);
+$bigger_font_size: rem(48);
+$title_size: rem(96);
 
-$primary-font-familly: "Helvetica, sans-serif";
+$primary-font-familly: 'Montserrat', sans-serif;
 
 // média queries
 

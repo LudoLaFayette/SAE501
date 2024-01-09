@@ -22,7 +22,7 @@ onMounted(async () =>{
 </script>
 
 <template>
- <p>welcome</p>
- {{ watches }}
- {{ boitiers }}
+ <p></p>
+ <!-- {{ watches }}
+ {{ boitiers }} -->
 </template>
