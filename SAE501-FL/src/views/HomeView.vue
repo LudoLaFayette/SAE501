@@ -5,13 +5,18 @@ const client = axios.create({
     baseURL: import.meta.env.VITE_API_URL,
 });
 const watches = ref([]) 
-const getRecipes = async () => {
+const boitiers = ref([])
+const getWatches = async () => {
     const response = await client.get('/watches')
     return response.data
-
+}
+const getBoitiers = async () => {
+    const response = await client.get('/boitiers')
+    return response.data
 }
 onMounted(async () =>{ 
-    watches.value = await getRecipes();
+    watches.value = await getWatches();
+  boitiers.value =  await getBoitiers();
    console.log(watches);
 });
 </script>
@@ -19,4 +24,5 @@ onMounted(async () =>{
 <template>
  <p>welcome</p>
  {{ watches }}
+ {{ boitiers }}
 </template>
