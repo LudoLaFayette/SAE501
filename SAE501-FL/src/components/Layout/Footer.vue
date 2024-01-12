@@ -41,14 +41,15 @@ import myText from '@/components/elements/myText.vue'
       <myText class="c-footer__column--text" size="p1" content="01 02 03 04 05" />
       <div class="c-footer__column--input">
         <input type="email" id="email" placeholder="Enter your email...." />
-        <myIcon class="" name="chevronRight" size="small" background="backgroundT" />
+        <myIcon class="" name="chevronRight" size="small" background="backgroundBCK" />
       </div>
     </div>
   </footer>
 </template>
   <style lang="scss" scoped>
 .c-footer {
-  background: $light-grey;
+  background: white;
+  border-top: 0.1rem solid black;
   color: $grey;
   display: grid;
   grid-template-columns: repeat(4, 1fr);

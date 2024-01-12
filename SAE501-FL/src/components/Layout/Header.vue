@@ -1,56 +1,117 @@
+<script setup>
+// import { useGlobalStore } from '@/stores/global.js';
+// const store = useGlobalStore();
+// console.log(store);
+</script>
+
 <template>
-    <header class="header">
-      <div class="logo-container">
-        <!-- Placez votre logo ici -->
-        <img src="/logo.svg" alt="Logo">
-      </div>
-      <nav class="navigation">
-        <a v-if="!isLoggedIn" href="#signup">S'inscrire</a>
-        <a v-if="!isLoggedIn" href="#login">Se connecter</a>
-        <button v-if="isLoggedIn" @click="goToProfile">{{ username }}</button>
-      </nav>
-    </header>
-  </template>
-  
-  <script>
-  export default {
-    name: 'HeaderComponent',
-    data() {
-      return {
-        isLoggedIn: false,  // Mettez à jour ce statut en fonction de l'état de connexion de l'utilisateur
-        username: 'VotreNomUtilisateur'  // Mettez à jour le nom d'utilisateur ici
+  <header class="c-header">
+    <div class="c-header__logo">
+      <img src="/logo.svg" alt="Logo de la maquette S5">
+    </div>
+    <nav class="c-header__menu">
+      <ul>
+        <li><a href="#">Acceuil</a></li>
+        <li><a href="#">Personaliser</a></li>
+        <li><a href="#">Profil</a></li>
+        <li><a href="#">ThreeJsView</a></li>
+      </ul>
+    </nav>
+    <div class="c-header__côté-droite">
+
+        <div class="c-header__côté-droite--Search">
+          <MyIcon name="search" background="noneStyle"  ></MyIcon>
+          <input type="search" placeholder="Rechercher...">
+        </div>
+        <div class="c-header__côté-droite--count" >
+                      1
+            </div>
+            <MyIcon class="c-header__côté-droite--border" name="shoppingBag" background="noneStyle"></MyIcon>        
+    </div>
+    
+
+  </header>
+
+</template>
+
+<style lang="scss" scoped>
+.c-header {
+      align-items: center;
+      background-color: white;
+      box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+      display: flex;
+      justify-content: space-between;  
+      padding: rem(20) rem(50);  
+
+        &__logo{
+          img {
+            height: rem(50);
+            width: auto;
+        }
+        } 
+
+
+      &__menu {
+          ul {
+              display: flex;
+              font-size: $normal_font_size;  
+              font-weight: 600;
+              gap: rem(30);              
+              list-style-type: none;
+              margin: 0;           
+              padding: 0;            
+              
+              li {
+                  a {
+                      color: black;
+                      text-decoration: none;
+                                          
+                      &:hover {
+                          text-decoration: underline;
+                      }
+                  }
+              }
+          }
       }
-    },
-    methods: {
-      goToProfile() {
-        // Implémentez la logique pour rediriger vers la page de profil
-        this.$router.push('/profile');
-      }
-    }
-  }
-  </script>
+
+        &__côté-droite {
+            display: flex;
+            align-items: center;
+            gap: rem(10);  
+            border-radius: rem(10);
+            box-shadow: 0px rem(2) rem(10) rgba(0, 0, 0, 0.20);
+            padding: rem(5);
+            
+            input[type="search"] {
+                border: none;
+                outline: none;
+            }
+            &--Search{
+                align-items: center;
+                background-color: white;             
+                border-radius: rem(15);
+                display: flex;
+
+            }  
+
+              &--count{
+              background-color: $primary-color;
+              box-shadow: (0px 0px 22px rgba(204, 0, 0, 0.80));
+              border-radius: rem(50);
+              font-size: rem(12);
+              translate: rem(65) rem(-5);
+              color: white;
+              
+
+            }
+            
+            &--border{         
+            border-left: 1px solid $grey;
+            border-radius: 0px 10px 10px 0px;
+                
+            }
+            
+            }
+        }
   
-  <style lang="scss" scoped>
-  .header {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    background-color: black;
-    color: white;
-    padding: 10px;
-  }
-  
-  .logo-container img {
-    max-width: 100px; /* Ajustez la taille du logo selon vos besoins */
-  }
-  
-  .navigation a, .navigation button {
-    color: white;
-    text-decoration: none;
-    background: none;
-    border: none;
-    cursor: pointer;
-  }
-  
-  /* Autres styles selon vos besoins */
-  </style>
+</style>
