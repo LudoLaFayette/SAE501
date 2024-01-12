@@ -13,7 +13,7 @@
           <input type="password" id="password" v-model="credentials.password" required>
         </div>
         <button type="submit" class="button1">Se connecter</button>
-        <button @click="register" class="button2">S'inscrire</button>
+        <button @click="register" class="button2">Oubli MDP</button>
       </form>
     </div>
   </template>
@@ -58,7 +58,7 @@
   }
   .button2{
     background-color: black;
-    width: 120px;
+    width: 180px;
     height: 60px;
     border: black 0.1rem solid;
     font-size: 25px;

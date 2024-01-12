@@ -2,6 +2,7 @@ import { createRouter, createWebHistory } from 'vue-router'
 import HomeView from '../views/HomeView.vue'
 import WatchView from '../views/WatchView.vue'
 import ProfilView from '../views/ProfilView.vue'
+import PanierView from '../views/PanierView.vue'
 
 const router = createRouter({
   history: createWebHistory(import.meta.env.BASE_URL),
@@ -28,6 +29,11 @@ const router = createRouter({
       path: '/profil',
       name : 'profil',
       component : ProfilView,
+    },
+    {
+      path: '/panier',
+      name : 'panier',
+      component : PanierView,
     },
   ]
 })

@@ -11,10 +11,10 @@
     </div>
     <nav class="c-header__menu">
       <ul>
-        <li><a href="#">Acceuil</a></li>
-        <li><a href="#">Personaliser</a></li>
-        <li><a href="#">Profil</a></li>
-        <li><a href="#">ThreeJsView</a></li>
+        <li><a href="/">Acceuil</a></li>
+        <li><a href="/customisation">Personaliser</a></li>
+        <li><a href="/profil">Profil</a></li>
+        <li><a href="/panier">Panier</a></li>
       </ul>
     </nav>
     <div class="c-header__côté-droite">
@@ -25,8 +25,7 @@
         </div>
         <div class="c-header__côté-droite--count" >
                       1
-            </div>
-            <MyIcon class="c-header__côté-droite--border" name="shoppingBag" background="noneStyle"></MyIcon>        
+        </div>            
     </div>
     
 

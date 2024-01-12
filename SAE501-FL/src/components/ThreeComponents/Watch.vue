@@ -45,11 +45,11 @@ boitier.fond.value = "black02";
 boitier.bracelet_tissu.value = "cuir_blanc";
 
 console.log(boitier)
-console.log(boitierFond)
+// console.log(boitierFond)
 
-console.log(boitier.boitier_shape.value)
-console.log(boitier.fond.value)
-console.log(braceletTissue)
+// // console.log(boitier.boitier_shape.value)
+// // console.log(boitier.fond.value)
+// console.log(braceletTissue)
 
 
 const initScene = () => {
@@ -277,11 +277,13 @@ onBeforeUnmount(() => {
     
 <template>
     <div >
-        <canvas ref="canvas"/>
-        <h1>{{fond}}</h1>
+        <canvas ref="canvas" />
+        <!-- <h1>{{fond}}</h1>
         <p>Choix du fond :</p>
         <input type="text" :value="boitier_shape">
         <input type="text" :value="fond" />
-        <input type="text" :value="bracelet_tissu">
+        <input type="text" :value="bracelet_tissu"> -->        
     </div>
 </template>
+<style lang="scss" scoped>
+</style>

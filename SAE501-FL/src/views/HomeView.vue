@@ -1,6 +1,6 @@
 <script setup>
 import hero from '@/components/layout/hero.vue'
-import {onMounted, ref, computed} from 'vue';
+import {onMounted, ref} from 'vue';
 import axios from 'axios';
 const client = axios.create({
     baseURL: import.meta.env.VITE_API_URL,
