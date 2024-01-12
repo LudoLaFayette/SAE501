@@ -1,4 +1,5 @@
 <script setup>
+import hero from '@/components/layout/hero.vue'
 import {onMounted, ref, computed} from 'vue';
 import axios from 'axios';
 const client = axios.create({
@@ -22,7 +23,5 @@ onMounted(async () =>{
 </script>
 
 <template>
- <p></p>
- <!-- {{ watches }}
- {{ boitiers }} -->
+ <hero/>
 </template>

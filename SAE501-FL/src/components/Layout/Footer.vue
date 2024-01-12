@@ -12,10 +12,10 @@ import myText from '@/components/elements/myText.vue'
         content="Lorem ipsum dolor sit amet, consectetur adipiscing elit. Commodo libero viverra dapibus odio sit malesuada in quis. Arcu tristique elementum viverra integer id."
       />
       <div class="c-footer__column--social_icons">
-        <myIcon name="facebook" background="backgroundTT" size="small" />
-        <myIcon name="twitter" background="backgroundTT" size="small" />
-        <myIcon name="linkedin" background="backgroundTT" size="small" />
-        <myIcon name="instagram" background="backgroundTT" size="small" />
+        <myIcon name="facebook" background="backgroundBCK" size="small" />
+        <myIcon name="twitter" background="backgroundBCK" size="small" />
+        <myIcon name="linkedin" background="backgroundBCK" size="small" />
+        <myIcon name="instagram" background="backgroundBCK" size="small" />
       </div>
     </div>
     <div class="c-footer__column">
