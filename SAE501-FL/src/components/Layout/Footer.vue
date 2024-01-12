@@ -20,9 +20,9 @@ import myText from '@/components/elements/myText.vue'
     </div>
     <div class="c-footer__column">
       <myTitle class="c-footer__column--title" content="Horaires" type="h4" />
-      <myText class="c-footer__column--text" size="p1" content="Monday-Friday: 9AM - 10PM" />
-      <myText class="c-footer__column--text" size="p1" content="Thursday: 09AM - 11PM" />
-      <myText class="c-footer__column--text" size="p1" content="Friday: 09AM - 8PM" />
+      <myText class="c-footer__column--text" size="p1" content="Lundi - Vendredi: 9h00 - 22h00" />
+      <myText class="c-footer__column--text" size="p1" content="Vendredi: 9h00 - 20h00" />
+      <myText class="c-footer__column--text" size="p1" content="Samedi: 9h00 - 17h00" />
     </div>
     <div class="c-footer__column">
       <myTitle class="c-footer__column--title" content="Liens utiles" type="h4" />
