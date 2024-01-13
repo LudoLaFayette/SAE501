@@ -66,6 +66,9 @@ const initScene = () => {
   renderer.setSize(window.innerWidth, window.innerHeight)
   renderer.setClearColor(0x222222,1);
   controls = new OrbitControls(camera,renderer.domElement);
+  renderer.shadowMap.enabled = true;
+  renderer.shadowMap.type = THREE.PCFShadowMap;
+ 
 
   // TExture de fond scène
   const textureLoader = new THREE.TextureLoader();
@@ -222,6 +225,7 @@ function onLoaded(collada) {
     // pierreMontre = objects.getObjectByName('pierre');
 
     // console.log(boitierC)
+    setShadow(scene, true, true);
     scene.add(objects);
     
     obstacles.push(objects);
@@ -250,6 +254,13 @@ function onClickEvent(event) {
     clickInfo.mouse.x = ((event.clientX-SCREEN_LEFT) / SCREEN_WIDTH ) * 2 - 1;
     clickInfo.mouse.y = -((event.clientY-SCREEN_TOP) / SCREEN_HEIGHT ) * 2 + 1;
   }
+  function setShadow(object, cast, receive) {
+        object.castShadow = cast;
+        object.receiveShadow = receive;
+        object.children.forEach(function (child) {
+          setShadow(child, cast, receive);
+        });
+      }
 
 
 onMounted(() => {
